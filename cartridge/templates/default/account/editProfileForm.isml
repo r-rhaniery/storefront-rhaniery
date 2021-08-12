@@ -29,6 +29,16 @@
             <isprint value="${pdict.profileForm.customer.cpf.attributes}" encoding="off" />>
         <div class="invalid-feedback"></div>
     </div>
+
+    <div class="form-group
+        <isif condition="${pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="birthday">
+            <isprint value="${pdict.profileForm.customer.birthday.label}" encoding="htmlcontent" />
+        </label>
+        <input type="Date" class="form-control" id="birthday"
+            <isprint value="${pdict.profileForm.customer.birthday.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
     
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.phone.mandatory === true}">required</isif>">

@@ -16,6 +16,7 @@ function getProfile(profile) {
             firstName: profile.firstName,
             lastName: profile.lastName,
             cpf: profile.cpf,
+            birthday: profile.birthday,
             email: profile.email,
             phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
             password: '********'

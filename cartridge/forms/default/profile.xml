@@ -28,6 +28,15 @@
 			range-error="error.message.14orless" 
 			type="string"/>
 
+		<field 
+			formid="birthday" 
+			label="label.input.birthday.profile" 
+			mandatory="true" 
+			max-length="10" 
+			missing-error="error.message.required"
+			range-error="error.message.10orless" 
+			type="string"/>
+
 		<field
 			formid="email" 
 			label="label.input.email.profile" 
@@ -58,7 +67,7 @@
 			formid="phone"
 			label="label.input.phone.profile"
 			mandatory="true"
-			regexp="^\(?([2-9][0-8][0-9])\)?[\-\. ]?([2-9][0-9]{2})[\-\. ]?([0-9]{4})(\s*x[0-9]+)?$"
+			regexp="^\(?([0-9]){2}\)?[\-\. ]?([0-9]{5})[\-\. ]?([0-9]{4})?$"
 			missing-error="error.message.required"
 			parse-error="error.message.parse.phone.profile.form"
 			type="string"/> 
