@@ -41,7 +41,6 @@
             <isprint value="${pdict.profileForm.customer.cpf.label}" encoding="htmlcontent" />
         </label>
         <input
-
             type="text"
             class="form-control"
             id="registration-form-cpf"
@@ -80,12 +79,12 @@
             type="tel"
             class="form-control"
             id="registration-form-phone"
-            placeholder="Example: (99) 99999-9999"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-phone-error"
             <isprint value=${pdict.profileForm.customer.phone.attributes} encoding="off" />
+            placeholder="${Resource.msg('example.phone','forms',null)}">
             <div class="invalid-feedback" id="form-phone-error"></div>
     </div>
 
