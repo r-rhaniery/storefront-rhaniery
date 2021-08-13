@@ -60,7 +60,7 @@
             <isprint value="${pdict.profileForm.customer.birthday.label}" encoding="htmlcontent" />
         </label>
         <input
-            type="Date"
+            type="date"
             class="form-control"
             id="birthday"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
