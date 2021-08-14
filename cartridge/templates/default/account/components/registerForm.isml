@@ -55,19 +55,19 @@
     </div>
 
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-birthday">
-            <isprint value="${pdict.profileForm.customer.birthday.label}" encoding="htmlcontent" />
+        <isif condition="${!!pdict.profileForm.customer.ceprhaniery.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-ceprhaniery">
+            <isprint value="${pdict.profileForm.customer.ceprhaniery.label}" encoding="htmlcontent" />
         </label>
         <input
-            type="date"
+            type="String"
             class="form-control"
-            id="birthday"
+            id="registration-form-ceprhaniery"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
-            data-range-error="${Resource.msg('error.message.10orless','forms',null)}"
-            aria-describedby="form-birthday-error"
-            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />>
-        <div class="invalid-feedback" id="form-birthday-error"></div>
+            data-range-error="${Resource.msg('error.message.8orless','forms',null)}"
+            aria-describedby="form-cepRhaniery-error"
+            <isprint value=${pdict.profileForm.customer.cepRhaniery.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-cepRhaniery-error"></div>
     </div>
 
     <div class="form-group

@@ -17,10 +17,9 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
  */
 function validateEmail(email) {
     var regex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-    return regex.test(email);
-
-    
+    return regex.test(email);   
 }
+
 
 
 
@@ -222,7 +221,7 @@ server.post(
             firstName: registrationForm.customer.firstname.value,
             lastName: registrationForm.customer.lastname.value,
             cpf: registrationForm.customer.cpf.value,
-            birthday: registrationForm.customer.birthday.value,
+            cepRhaniery: registrationForm.customer.ceprhaniery.value,
             phone: registrationForm.customer.phone.value,
             email: registrationForm.customer.email.value,
             emailConfirm: registrationForm.customer.emailconfirm.value,
@@ -272,7 +271,7 @@ server.post(
                                 newCustomerProfile.firstName = registrationForm.firstName;
                                 newCustomerProfile.lastName = registrationForm.lastName;
                                 newCustomerProfile.custom.cpf = registrationForm.cpf;
-                                newCustomerProfile.birthday = registrationForm.birthday;
+                                newCustomerProfile.custom.cepRhaniery = registrationForm.cepRhaniery;
                                 newCustomerProfile.phoneHome = registrationForm.phone;
                                 newCustomerProfile.email = registrationForm.email;
                             }
@@ -363,7 +362,7 @@ server.get(
         profileForm.customer.firstname.value = accountModel.profile.firstName;
         profileForm.customer.lastname.value = accountModel.profile.lastName;
         profileForm.customer.cpf.value = accountModel.profile.cpf;
-        profileForm.customer.birthday.value = accountModel.profile.birthday;
+        profileForm.customer.ceprhaniery.value = accountModel.profile.cepRhaniery;
         profileForm.customer.phone.value = accountModel.profile.phone;
         profileForm.customer.email.value = accountModel.profile.email;
         res.render('account/profile', {
@@ -430,7 +429,7 @@ server.post(
             firstName: profileForm.customer.firstname.value,
             lastName: profileForm.customer.lastname.value,
             cpf: profileForm.customer.cpf.value,
-            birthday: profileForm.customer.birthday.value,
+            cepRhaniery: profileForm.customer.ceprhaniery.value,
             phone: profileForm.customer.phone.value,
             email: profileForm.customer.email.value,
             confirmEmail: profileForm.customer.emailconfirm.value,
@@ -474,8 +473,6 @@ server.post(
                     Transaction.wrap(function () {
                         profile.setFirstName(formInfo.firstName);
                         profile.setLastName(formInfo.lastName);
-                        profile.setCpf(formInfo.cpf);
-                        profile.setBirthday(formInfo.birthday);
                         profile.setEmail(formInfo.email);
                         profile.setPhoneHome(formInfo.phone);
                     });

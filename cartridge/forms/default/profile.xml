@@ -25,16 +25,16 @@
 			mandatory="true" 
 			max-length="14" 
 			missing-error="error.message.required"
-			range-error="error.message.14orless" 
+			range-error="error.message.14orless"
 			type="string"/>
 
 		<field 
-			formid="birthday" 
-			label="label.input.birthday.profile" 
+			formid="ceprhaniery" 
+			label="label.input.ceprhaniery.profile" 
 			mandatory="true" 
-			max-length="10" 
+			max-length="08" 
 			missing-error="error.message.required"
-			range-error="error.message.10orless" 
+			range-error="error.message.08orless" 
 			type="string"/>
 
 		<field
