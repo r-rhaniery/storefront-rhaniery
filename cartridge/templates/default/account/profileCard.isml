@@ -23,6 +23,18 @@
             <dd>${pdict.account.profile.cepRhaniery}</dd>
         </dl>
         <dl>
+            <dt>${Resource.msg('label.profile.staterhaniery','account',null)}</dt>
+            <dd>${pdict.account.profile.stateRhaniery}</dd>
+        </dl>
+        <dl>
+            <dt>${Resource.msg('label.profile.cityrhaniery','account',null)}</dt>
+            <dd>${pdict.account.profile.cityRhaniery}</dd>
+        </dl>
+        <dl>
+            <dt>${Resource.msg('label.profile.addressrhaniery','account',null)}</dt>
+            <dd>${pdict.account.profile.addressRhaniery}</dd>
+        </dl>
+        <dl>
             <dt>${Resource.msg('label.profile.email','account',null)}</dt>
             <dd>${pdict.account.profile.email}</dd>
         </dl>

@@ -37,6 +37,33 @@
 			range-error="error.message.08orless" 
 			type="string"/>
 
+		<field 
+			formid="staterhaniery" 
+			label="label.input.staterhaniery.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			range-error="error.message.50orless" 
+			type="string" />
+
+		<field 
+			formid="cityrhaniery" 
+			label="label.input.cityrhaniery.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			range-error="error.message.50orless" 
+			type="string" />
+
+		<field 
+			formid="addressrhaniery" 
+			label="label.input.addressrhaniery.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			range-error="error.message.50orless" 
+			type="string" />
+
 		<field
 			formid="email" 
 			label="label.input.email.profile" 

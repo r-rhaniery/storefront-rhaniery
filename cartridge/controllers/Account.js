@@ -222,6 +222,9 @@ server.post(
             lastName: registrationForm.customer.lastname.value,
             cpf: registrationForm.customer.cpf.value,
             cepRhaniery: registrationForm.customer.ceprhaniery.value,
+            stateRhaniery: registrationForm.customer.staterhaniery.value,
+            cityRhaniery: registrationForm.customer.cityrhaniery.value,
+            addressRhaniery: registrationForm.customer.addressrhaniery.value,
             phone: registrationForm.customer.phone.value,
             email: registrationForm.customer.email.value,
             emailConfirm: registrationForm.customer.emailconfirm.value,
@@ -272,6 +275,9 @@ server.post(
                                 newCustomerProfile.lastName = registrationForm.lastName;
                                 newCustomerProfile.custom.cpf = registrationForm.cpf;
                                 newCustomerProfile.custom.cepRhaniery = registrationForm.cepRhaniery;
+                                newCustomerProfile.custom.stateRhaniery = registrationForm.stateRhaniery;
+                                newCustomerProfile.custom.cityRhaniery = registrationForm.cityRhaniery;
+                                newCustomerProfile.custom.addressRhaniery = registrationForm.addressRhaniery;
                                 newCustomerProfile.phoneHome = registrationForm.phone;
                                 newCustomerProfile.email = registrationForm.email;
                             }
@@ -363,6 +369,9 @@ server.get(
         profileForm.customer.lastname.value = accountModel.profile.lastName;
         profileForm.customer.cpf.value = accountModel.profile.cpf;
         profileForm.customer.ceprhaniery.value = accountModel.profile.cepRhaniery;
+        profileForm.customer.staterhaniery.value = accountModel.profile.stateRhaniery;
+        profileForm.customer.cityrhaniery.value = accountModel.profile.cityRhaniery;
+        profileForm.customer.addressrhaniery.value = accountModel.profile.addressRhaniery;
         profileForm.customer.phone.value = accountModel.profile.phone;
         profileForm.customer.email.value = accountModel.profile.email;
         res.render('account/profile', {
@@ -430,6 +439,9 @@ server.post(
             lastName: profileForm.customer.lastname.value,
             cpf: profileForm.customer.cpf.value,
             cepRhaniery: profileForm.customer.ceprhaniery.value,
+            stateRhaniery: profileForm.customer.staterhaniery.value,
+            cityRhaniery: profileForm.customer.cityrhaniery.value,
+            addressRhaniery: profileForm.customer.addressrhaniery.value,
             phone: profileForm.customer.phone.value,
             email: profileForm.customer.email.value,
             confirmEmail: profileForm.customer.emailconfirm.value,

@@ -60,7 +60,7 @@
             <isprint value="${pdict.profileForm.customer.ceprhaniery.label}" encoding="htmlcontent" />
         </label>
         <input
-            type="String"
+            type="text"
             class="form-control"
             id="registration-form-ceprhaniery"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
@@ -68,6 +68,54 @@
             aria-describedby="form-cepRhaniery-error"
             <isprint value=${pdict.profileForm.customer.cepRhaniery.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-cepRhaniery-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.staterhaniery.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-staterhaniery">
+            <isprint value="${pdict.profileForm.customer.staterhaniery.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-staterhaniery"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-stateRhaniery-error"
+            <isprint value=${pdict.profileForm.customer.stateRhaniery.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-stateRhaniery-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.cityrhaniery.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-cityrhaniery">
+            <isprint value="${pdict.profileForm.customer.cityrhaniery.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-cityrhaniery"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-cityRhaniery-error"
+            <isprint value=${pdict.profileForm.customer.cityRhaniery.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-cityRhaniery-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.addressrhaniery.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-addressrhaniery">
+            <isprint value="${pdict.profileForm.customer.addressrhaniery.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-addressrhaniery"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-addressRhaniery-error"
+            <isprint value=${pdict.profileForm.customer.addressRhaniery.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-addressRhaniery-error"></div>
     </div>
 
     <div class="form-group
