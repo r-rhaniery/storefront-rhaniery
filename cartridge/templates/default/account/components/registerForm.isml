@@ -54,67 +54,105 @@
         <div class="invalid-feedback" id="form-cpf-error"></div>
     </div>
 
+    <!-- <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-birthday">
+            <isprint value="${pdict.profileForm.customer.birthday.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="date"
+            class="form-control"
+            id="registration-form-birthday"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-birthday-error"
+            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-birthday-error"></div>
+    </div> -->
+
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.ceprhaniery.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-ceprhaniery">
-            <isprint value="${pdict.profileForm.customer.ceprhaniery.label}" encoding="htmlcontent" />
+        <isif condition="${!!pdict.profileForm.customer.gender.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-gender">
+            <isprint value="${pdict.profileForm.customer.gender.label}" encoding="htmlcontent"/>
+        </label>
+        <select
+            type="text"
+            class="form-control"
+            id="registration-form-gender"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.12orless','forms',null)}"
+            aria-describedby="form-gender-error"
+            placeholder="Gender"
+            <isprint value=${pdict.profileForm.customer.gender.attributes} encoding="off" />>
+             <option value=1>Male</option>
+             <option value=2>Female</option>
+             <option value=3>Other</option>
+        </select>
+        <div class="invalid-feedback" id="form-gender-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.cep.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-cep">
+            <isprint value="${pdict.profileForm.customer.cep.label}" encoding="htmlcontent" />
         </label>
         <input
             type="text"
             class="form-control"
-            id="registration-form-ceprhaniery"
+            maxlength="8"
+            id="registration-form-cep"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.8orless','forms',null)}"
             aria-describedby="form-cepRhaniery-error"
-            <isprint value=${pdict.profileForm.customer.cepRhaniery.attributes} encoding="off" />>
+            <isprint value=${pdict.profileForm.customer.cep.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-cepRhaniery-error"></div>
     </div>
 
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.staterhaniery.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-staterhaniery">
-            <isprint value="${pdict.profileForm.customer.staterhaniery.label}" encoding="htmlcontent" />
+        <isif condition="${!!pdict.profileForm.customer.state.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-state">
+            <isprint value="${pdict.profileForm.customer.state.label}" encoding="htmlcontent" />
         </label>
         <input
             type="text"
             class="form-control"
-            id="registration-form-staterhaniery"
+            id="registration-form-state"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-stateRhaniery-error"
-            <isprint value=${pdict.profileForm.customer.stateRhaniery.attributes} encoding="off" />>
+            <isprint value=${pdict.profileForm.customer.state.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-stateRhaniery-error"></div>
     </div>
 
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.cityrhaniery.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-cityrhaniery">
-            <isprint value="${pdict.profileForm.customer.cityrhaniery.label}" encoding="htmlcontent" />
+        <isif condition="${!!pdict.profileForm.customer.city.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-city">
+            <isprint value="${pdict.profileForm.customer.city.label}" encoding="htmlcontent" />
         </label>
         <input
             type="text"
             class="form-control"
-            id="registration-form-cityrhaniery"
+            id="registration-form-city"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-cityRhaniery-error"
-            <isprint value=${pdict.profileForm.customer.cityRhaniery.attributes} encoding="off" />>
+            <isprint value=${pdict.profileForm.customer.city.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-cityRhaniery-error"></div>
     </div>
 
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.addressrhaniery.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-addressrhaniery">
-            <isprint value="${pdict.profileForm.customer.addressrhaniery.label}" encoding="htmlcontent" />
+        <isif condition="${!!pdict.profileForm.customer.address.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-address">
+            <isprint value="${pdict.profileForm.customer.address.label}" encoding="htmlcontent" />
         </label>
         <input
             type="text"
             class="form-control"
-            id="registration-form-addressrhaniery"
+            id="registration-form-address"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-addressRhaniery-error"
-            <isprint value=${pdict.profileForm.customer.addressRhaniery.attributes} encoding="off" />>
+            <isprint value=${pdict.profileForm.customer.address.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-addressRhaniery-error"></div>
     </div>
 
@@ -225,5 +263,40 @@
         <a href="${'#'}">
             ${Resource.msg('link.privacypolicy.registration', 'registration', null)}
         </a>
-    </div>
+    </div>  
 </form>
+
+<script>    
+    const limparFomulario = (endereco) => {
+        document.getElementById('registration-form-state').value = '';
+        document.getElementById('registration-form-city').value = '';
+        document.getElementById('registration-form-address').value = '';   
+    }
+
+    const preencherFormulario = (endereco) => {
+        document.getElementById('registration-form-state').value = endereco.uf;
+        document.getElementById('registration-form-city').value = endereco.localidade;
+        document.getElementById('registration-form-address').value = endereco.logradouro;   
+    }
+    const isNumber = (number) => /^[0-9]+$/.test(number);
+    const cepValido = (cep) => cep.length == 8 && isNumber(cep);
+
+    const pesquisarCep = async() => {
+        limparFomulario()
+        const cep = document.getElementById('registration-form-cep').value;
+        const url ="https://viacep.com.br/ws/"+cep+"/json/";
+        if (cepValido(cep)){
+            const dados = await fetch(url);
+            const endereco = await dados.json();
+            if (endereco.hasOwnProperty('erro')){
+                document.getElementById('registration-form-state').value = 'CEP não encontrado!';
+            }else {
+                preencherFormulario(endereco);
+            }
+        }else {
+            document.getElementById('registration-form-state').value = 'CEP incorreto!';
+        }    
+    }      
+    	
+    document.getElementById('registration-form-cep').addEventListener('focusout', pesquisarCep);
+</script>

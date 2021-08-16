@@ -18,21 +18,37 @@
             <dt>${Resource.msg('label.profile.cpf','account',null)}</dt>
             <dd>${pdict.account.profile.cpf}</dd>
         </dl>
+        <!-- <dl>
+            <dt>${Resource.msg('label.profile.birthday','account',null)}</dt>
+            <dd>${pdict.account.profile.birthday}</dd>
+        </dl> -->
         <dl>
-            <dt>${Resource.msg('label.profile.ceprhaniery','account',null)}</dt>
-            <dd>${pdict.account.profile.cepRhaniery}</dd>
+            <dt>${Resource.msg('label.profile.gender','account',null)}</dt>
+            <isif condition="${!pdict.account.profile.gender == 1}">
+                <dd>${Resource.msg('label.profile.gender.male','account',null)}</dd>
+            </isif>
+            <isif condition="${!pdict.account.profile.gender == 2}">
+                <dd>${Resource.msg('label.profile.gender.female','account',null)}</dd>
+            </isif>
+            <isif condition="${!pdict.account.profile.gender == 3}">
+                <dd>${Resource.msg('label.profile.gender.other','account',null)}</dd>
+            </isif>
         </dl>
         <dl>
-            <dt>${Resource.msg('label.profile.staterhaniery','account',null)}</dt>
-            <dd>${pdict.account.profile.stateRhaniery}</dd>
+            <dt>${Resource.msg('label.profile.cep','account',null)}</dt>
+            <dd>${pdict.account.profile.cep}</dd>
         </dl>
         <dl>
-            <dt>${Resource.msg('label.profile.cityrhaniery','account',null)}</dt>
-            <dd>${pdict.account.profile.cityRhaniery}</dd>
+            <dt>${Resource.msg('label.profile.state','account',null)}</dt>
+            <dd>${pdict.account.profile.state}</dd>
         </dl>
         <dl>
-            <dt>${Resource.msg('label.profile.addressrhaniery','account',null)}</dt>
-            <dd>${pdict.account.profile.addressRhaniery}</dd>
+            <dt>${Resource.msg('label.profile.city','account',null)}</dt>
+            <dd>${pdict.account.profile.city}</dd>
+        </dl>
+        <dl>
+            <dt>${Resource.msg('label.profile.address','account',null)}</dt>
+            <dd>${pdict.account.profile.address}</dd>
         </dl>
         <dl>
             <dt>${Resource.msg('label.profile.email','account',null)}</dt>

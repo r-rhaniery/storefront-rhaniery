@@ -23,11 +23,13 @@ function getProfile(profile) {
         result = {
             firstName: profile.firstName,
             lastName: profile.lastName,
-            cpf: profileCustom.custom.cpf,
-            cepRhaniery: profileCustom.custom.cepRhaniery,
-            stateRhaniery: profileCustom.custom.stateRhaniery,
-            cityRhaniery: profileCustom.custom.cityRhaniery,
-            addressRhaniery: profileCustom.custom.addressRhaniery,
+           // birthday: profile.birthday,
+            gender: profile.gender,
+            cpf: profileCustom.custom.cpfRhaniery,
+            cep: profileCustom.custom.cepRhaniery,
+            state: profileCustom.custom.stateRhaniery,
+            city: profileCustom.custom.cityRhaniery,
+            address: profileCustom.custom.addressRhaniery,
             email: profile.email,
             phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
             password: '********'

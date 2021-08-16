@@ -23,14 +23,30 @@
 			formid="cpf" 
 			label="label.input.cpf.profile" 
 			mandatory="true" 
-			max-length="14" 
+			max-length="14"
 			missing-error="error.message.required"
 			range-error="error.message.14orless"
 			type="string"/>
 
+		<!-- <field 
+			formid="birthday" 
+			label="label.input.birthday.profile" 
+			mandatory="true" 
+			missing-error="error.message.required"
+			range-error="error.message.10orless"
+			type="dateString"/> -->
+
 		<field 
-			formid="ceprhaniery" 
-			label="label.input.ceprhaniery.profile" 
+			formid="gender" 
+			label="label.input.gender.profile" 
+			mandatory="true" 
+			missing-error="error.message.required"
+			range-error="error.message.50orless"
+			type="integer"/>
+
+		<field 
+			formid="cep" 
+			label="label.input.cep.profile" 
 			mandatory="true" 
 			max-length="08" 
 			missing-error="error.message.required"
@@ -38,8 +54,8 @@
 			type="string"/>
 
 		<field 
-			formid="staterhaniery" 
-			label="label.input.staterhaniery.profile" 
+			formid="state" 
+			label="label.input.state.profile" 
 			mandatory="true" 
 			max-length="50" 
 			missing-error="error.message.required"
@@ -47,8 +63,8 @@
 			type="string" />
 
 		<field 
-			formid="cityrhaniery" 
-			label="label.input.cityrhaniery.profile" 
+			formid="city" 
+			label="label.input.city.profile" 
 			mandatory="true" 
 			max-length="50" 
 			missing-error="error.message.required"
@@ -56,8 +72,8 @@
 			type="string" />
 
 		<field 
-			formid="addressrhaniery" 
-			label="label.input.addressrhaniery.profile" 
+			formid="address" 
+			label="label.input.address.profile" 
 			mandatory="true" 
 			max-length="50" 
 			missing-error="error.message.required"

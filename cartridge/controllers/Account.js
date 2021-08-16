@@ -17,7 +17,7 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
  */
 function validateEmail(email) {
     var regex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-    return regex.test(email);   
+    return regex.test(email);
 }
 
 
@@ -127,7 +127,7 @@ server.post(
                     type: emailHelpers.emailTypes.accountLocked
                 };
 
-                hooksHelper('app.customer.email', 'sendEmail', [emailObj, 'account/accountLockedEmail', context], function () {});
+                hooksHelper('app.customer.email', 'sendEmail', [emailObj, 'account/accountLockedEmail', context], function () { });
             }
 
             res.json({
@@ -214,17 +214,19 @@ server.post(
                 Resource.msg('error.message.password.constraints.not.matched', 'forms', null);
             registrationForm.valid = false;
         }
-       
+
 
         // setting variables for the BeforeComplete function
         var registrationFormObj = {
             firstName: registrationForm.customer.firstname.value,
             lastName: registrationForm.customer.lastname.value,
             cpf: registrationForm.customer.cpf.value,
-            cepRhaniery: registrationForm.customer.ceprhaniery.value,
-            stateRhaniery: registrationForm.customer.staterhaniery.value,
-            cityRhaniery: registrationForm.customer.cityrhaniery.value,
-            addressRhaniery: registrationForm.customer.addressrhaniery.value,
+            //birthday: registrationForm.customer.birthday.value,
+            gender: registrationForm.customer.gender.value,
+            cep: registrationForm.customer.cep.value,
+            state: registrationForm.customer.state.value,
+            city: registrationForm.customer.city.value,
+            address: registrationForm.customer.address.value,
             phone: registrationForm.customer.phone.value,
             email: registrationForm.customer.email.value,
             emailConfirm: registrationForm.customer.emailconfirm.value,
@@ -273,11 +275,13 @@ server.post(
 
                                 newCustomerProfile.firstName = registrationForm.firstName;
                                 newCustomerProfile.lastName = registrationForm.lastName;
-                                newCustomerProfile.custom.cpf = registrationForm.cpf;
-                                newCustomerProfile.custom.cepRhaniery = registrationForm.cepRhaniery;
-                                newCustomerProfile.custom.stateRhaniery = registrationForm.stateRhaniery;
-                                newCustomerProfile.custom.cityRhaniery = registrationForm.cityRhaniery;
-                                newCustomerProfile.custom.addressRhaniery = registrationForm.addressRhaniery;
+                                newCustomerProfile.custom.cpfRhaniery = registrationForm.cpf;
+                                //newCustomerProfile.birthday = registrationForm.birthday;
+                                newCustomerProfile.gender = registrationForm.gender;
+                                newCustomerProfile.custom.cepRhaniery = registrationForm.cep;
+                                newCustomerProfile.custom.stateRhaniery = registrationForm.state;
+                                newCustomerProfile.custom.cityRhaniery = registrationForm.city;
+                                newCustomerProfile.custom.addressRhaniery = registrationForm.address;
                                 newCustomerProfile.phoneHome = registrationForm.phone;
                                 newCustomerProfile.email = registrationForm.email;
                             }
@@ -334,7 +338,7 @@ server.post(
 
         return next();
     }
-    
+
 );
 
 
@@ -368,10 +372,12 @@ server.get(
         profileForm.customer.firstname.value = accountModel.profile.firstName;
         profileForm.customer.lastname.value = accountModel.profile.lastName;
         profileForm.customer.cpf.value = accountModel.profile.cpf;
-        profileForm.customer.ceprhaniery.value = accountModel.profile.cepRhaniery;
-        profileForm.customer.staterhaniery.value = accountModel.profile.stateRhaniery;
-        profileForm.customer.cityrhaniery.value = accountModel.profile.cityRhaniery;
-        profileForm.customer.addressrhaniery.value = accountModel.profile.addressRhaniery;
+        //profileForm.customer.birthday.value = accountModel.profile.birthday;
+        profileForm.customer.gender.value = accountModel.profile.gender;
+        profileForm.customer.cep.value = accountModel.profile.cep;
+        profileForm.customer.state.value = accountModel.profile.state;
+        profileForm.customer.city.value = accountModel.profile.city;
+        profileForm.customer.address.value = accountModel.profile.address;
         profileForm.customer.phone.value = accountModel.profile.phone;
         profileForm.customer.email.value = accountModel.profile.email;
         res.render('account/profile', {
@@ -438,10 +444,12 @@ server.post(
             firstName: profileForm.customer.firstname.value,
             lastName: profileForm.customer.lastname.value,
             cpf: profileForm.customer.cpf.value,
-            cepRhaniery: profileForm.customer.ceprhaniery.value,
-            stateRhaniery: profileForm.customer.staterhaniery.value,
-            cityRhaniery: profileForm.customer.cityrhaniery.value,
-            addressRhaniery: profileForm.customer.addressrhaniery.value,
+            //birthday: profileForm.customer.birthday.value,
+            gender: profileForm.customer.gender.value,
+            cep: profileForm.customer.cep.value,
+            state: profileForm.customer.state.value,
+            city: profileForm.customer.city.value,
+            address: profileForm.customer.address.value,
             phone: profileForm.customer.phone.value,
             email: profileForm.customer.email.value,
             confirmEmail: profileForm.customer.emailconfirm.value,
@@ -874,10 +882,15 @@ server.post('SaveNewPassword', server.middleware.https, function (req, res, next
  */
 server.get('Header', server.middleware.include, function (req, res, next) {
     var template = req.querystring.mobile ? 'account/mobileHeader' : 'account/header';
-    res.render(template, { name:
-        req.currentCustomer.profile ? req.currentCustomer.profile.firstName : null
+    res.render(template, {
+        name:
+            req.currentCustomer.profile ? req.currentCustomer.profile.firstName : null
     });
     next();
 });
 
 module.exports = server.exports();
+
+
+
+
