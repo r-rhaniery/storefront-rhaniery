@@ -1,0 +1,8 @@
+<div class="test">
+    <isprint value="${pdict.name}"/>
+</div>
+
+<div class="test">
+    <isprint value="${pdict.image}"/>
+</div>
+

@@ -1,0 +1,29 @@
+<iscontent type="plain/text" charset="UTF-8" compact="false" />
+
+<script>
+
+    // This localStorage values are used on custom editors
+
+    var prefix = 'gs_context_';
+
+    localStorage.setItem(prefix + 'siteId', '${pdict.site}');
+
+    localStorage.setItem(prefix + 'pageId', '${pdict.cid}');
+
+    localStorage.setItem(prefix + 'locale', '${pdict.locale}');
+
+</script>
+
+<div style="margin:0 400px;">
+
+    <isprint value="${pdict.regions.main.render()}" encoding="off" />
+
+    <p id="myID">  <p>
+
+</div>
+
+<script>
+
+    $("html, body").animate({ scrollTop: $("#myID").scrollTop() }, 1000)
+
+</script>

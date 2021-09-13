@@ -35,7 +35,7 @@
         <div class="invalid-feedback" id="form-lname-error"></div>
     </div>
 
-    <div class="form-group
+    <!-- <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.cpf.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-cpf">
             <isprint value="${pdict.profileForm.customer.cpf.label}" encoding="htmlcontent" />
@@ -52,7 +52,7 @@
             aria-describedby="form-cpf-error"
             <isprint value=${pdict.profileForm.customer.cpf.attributes} encoding="off" />> 
         <div class="invalid-feedback" id="form-cpf-error"></div>
-    </div>
+    </div> -->
 
     <!-- <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
